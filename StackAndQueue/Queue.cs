@@ -8,9 +8,9 @@ namespace StackAndQueue
 {
     internal class Queue
       {
-            public Node top;
-            public void Push(int data)
-            {
+          public Node top;
+         public void Push(int data)
+             {
                 Node newNode = new Node();
 
                 newNode.data = data;
@@ -29,9 +29,16 @@ namespace StackAndQueue
                     temp.next = newNode;
                 }
             }
-
-            public void DisplayQueue()
-            {
+                public void Dequeue()
+                {
+                  while (top != null)
+                 {
+                   Console.WriteLine($"start: {top.data}");
+                   top = top.next;
+                 }
+                }
+             public void DisplayQueue()
+             {
                 if (top == null)
                 {
                     Console.WriteLine("Queue is empty");
